@@ -13,8 +13,8 @@
 "   recommend picking out the parts you want and understand.
 "
 "   You can find me at http://spf13.com
-
-    I've forked the project and added some modifications -- gabrielgciafdez
+"
+"   I've forked the project and added some modifications -- gabrielgciafdez
 " }
 
 " Environment {
