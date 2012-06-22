@@ -13,6 +13,8 @@
 "   recommend picking out the parts you want and understand.
 "
 "   You can find me at http://spf13.com
+
+    I've forked the project and added some modifications -- gabrielgciafdez
 " }
 
 " Environment {
@@ -177,13 +179,7 @@
 " }
 
 " Vim UI {
-    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-        color solarized                 " load a colorscheme
-    endif
-        let g:solarized_termtrans=1
-        let g:solarized_termcolors=256
-        let g:solarized_contrast="high"
-        let g:solarized_visibility="high"
+    colors darkblack
     set tabpagemax=15               " only show 15 tabs
     set showmode                    " display the current mode
 
@@ -450,6 +446,7 @@
         let g:ctrlp_custom_ignore = {
             \ 'dir':  '\.git$\|\.hg$\|\.svn$',
             \ 'file': '\.exe$\|\.so$\|\.dll$' }
+        set wildignore+=*/cache/*
      "}
 
      " TagBar {
@@ -606,3 +603,4 @@ endfunction
         endif
     endif
 " }
+
