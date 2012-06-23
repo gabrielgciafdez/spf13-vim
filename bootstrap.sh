@@ -25,6 +25,17 @@ mkdir -p $endpath/.vim/bundle
 ln -s $endpath/.vimrc $HOME/.vimrc
 ln -s $endpath/.vim $HOME/.vim
 
+echo "Installing Symfony2 Codesniffer Standard"
+#pear_info=$(pear config-show | grep php_dir)
+#echo $pear_info
+#pear_dir=$pear_info | cut -d ' ' -f 4 | sed 's/ *$//g'
+#echo $pear_dir
+#codesniffer_stds_path="$pear_dir/PHP/CodeSniffer/Standards/"
+codesniffer_stds_path="/usr/share/php/PHP/CodeSniffer/Standards"
+git clone https://github.com/opensky/Symfony2-coding-standard.git $codesniffer_stds_path/Symfony2
+# set Symfony2 std as default
+phpcs --config-set default_standard Symfony2
+
 echo "Installing Vundle"
 git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 

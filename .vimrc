@@ -106,6 +106,7 @@
     " PHP
         if count(g:spf13_bundle_groups, 'php')
             Bundle 'spf13/PIV'
+            Bundle 'joonty/vim-phpqa.git'
         endif
 
     " Python
@@ -527,7 +528,11 @@
 
      " }
 
-
+     " vim-phpqa {
+        let g:phpqa_messdetector_autorun = 0
+        let g:phpqa_codesniffer_args = "--standard=Symfony2"
+        cmap phpcs Phpcs
+     "}
 " }
 
 " GUI Settings {
